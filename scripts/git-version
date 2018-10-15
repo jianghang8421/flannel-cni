@@ -3,6 +3,8 @@
 # parse the current git commit hash
 COMMIT=`git rev-parse HEAD`
 
+git fetch
+
 # check if the current commit has a matching tag
 TAG=$(git describe --exact-match --abbrev=0 --tags ${COMMIT} 2> /dev/null || true)
 
